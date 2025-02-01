@@ -12,7 +12,7 @@
     "no-empty-source": true,
     "max-empty-lines": 3,
     "rule-empty-line-before": ["always", {
-      "except": ["inside-block", "after-declaration"]
+      "except": ["inside-block"]
     }]
   }
 }
