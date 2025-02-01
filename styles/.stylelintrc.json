@@ -9,6 +9,9 @@
     "block-no-empty": true,
     "indentation": 2,
     "color-hex-case": "lower",
-    "no-empty-source": true
+    "no-empty-source": true,
+    "rule-empty-line-before": ["always", {
+      "except": ["inside-block", "after-declaration"]
+    }]
   }
 }
