@@ -34,4 +34,5 @@ jobs:
         run: |
           echo "Building Project..."
           mkdir build
-          cp -r * build/
+          rsync -av --exclude 'build/' . build/
+
