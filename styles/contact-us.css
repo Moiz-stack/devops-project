@@ -1,20 +1,20 @@
-body {
+body{
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
-form {
+form{
     width: 50%;
     margin: auto;
 }
 
-label, input, textarea {
+label,input,textarea{
     display: block;
     width: 100%;
     margin-bottom: 10px;
 }
 
-button {
+button{
     background: blue;
     color: white;
     padding: 10px 20px;
@@ -22,6 +22,6 @@ button {
     cursor: pointer;
 }
 
-footer {
+footer{
     margin-top: 20px;
 }
