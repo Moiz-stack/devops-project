@@ -35,4 +35,3 @@ jobs:
           echo "Building Project..."
           mkdir build
           rsync -av --exclude 'build/' . build/
-
