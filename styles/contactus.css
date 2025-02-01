@@ -8,8 +8,8 @@ body {
     margin: auto;
   }
   
-  label, 
-  input, 
+  label,
+  input,
   textarea {
     display: block;
     width: 100%;
@@ -27,4 +27,3 @@ body {
   footer {
     margin-top: 20px;
   }
-  
