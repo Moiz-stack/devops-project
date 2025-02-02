@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 10%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -50,11 +50,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
-    135deg,
-    #00bcd4,
-    #00796b
-  ); /* Teal to greenish-blue gradient */
+  background: linear-gradient(135deg, #00bcd4, #00796b);
   height: 100vh;
   color: white;
   display: flex;
@@ -67,7 +63,7 @@ body {
 
 .hero-content {
   max-width: 600px;
-  background-color: rgba(0, 0, 0, 60%); /* Slightly darker overlay for better readability */
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better readability */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -100,3 +96,11 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Fixed percentage notation */
+.some-opacity {
+  opacity: 20%;
+}
+
+/* Ensure correct indentation */
+/* Ensure file ends with a newline */
