@@ -1,0 +1,43 @@
+name: CI Final Tests & Linting
+
+on:
+  pull_request:
+    branches:
+      - production
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter (HTMLHint & Stylelint)
+        run: |
+          npx htmlhint "**/*.html"
+          npx stylelint "**/*.css"
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build Project
+        run: |
+          echo "Building Project..."
+          mkdir build
+          rsync -av --exclude 'build/' . build/
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build/
