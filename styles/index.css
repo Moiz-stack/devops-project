@@ -50,11 +50,12 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
-    135deg,
-    #00bcd4,
-    #00796b
-  ); /* Teal to greenish-blue gradient */
+  background:
+    linear-gradient(
+      135deg,
+      #00bcd4,
+      #00796b
+    ); /* Teal to greenish-blue gradient */
   height: 100vh;
   color: white;
   display: flex;
