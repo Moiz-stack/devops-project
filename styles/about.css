@@ -27,6 +27,8 @@ section {
 
 /* Fix incorrect percentage notation */
 .some-class {
-  opacity: 10%;
+  color: color-mix(in srgb, var(--base-color) 10%, transparent);
 }
 
+/* Ensure correct indentation */
+/* Ensure file ends with a newline */
