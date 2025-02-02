@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 10%);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
 
 .nav-links {
@@ -67,10 +67,10 @@ body {
 
 .hero-content {
   max-width: 600px;
-  background-color: rgba(0, 0, 0, 60%); /* Slightly darker overlay for better readability */
+  background-color: rgb(0 0 0 / 60%); /* Slightly darker overlay for better readability */
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 20%);
 }
 
 .hero h1 {
@@ -98,5 +98,5 @@ body {
 .cta-button:hover {
   background-color: #0097a7; /* Darker teal on hover */
   transform: translateY(-3px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 20%);
 }
