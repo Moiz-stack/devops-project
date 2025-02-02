@@ -1,0 +1,64 @@
+name: Development Deployment
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - "**.html"
+      - "**.css"
+      - "**.js"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter (HTMLHint & Stylelint)
+        run: |
+          npx htmlhint "**/*.html"
+          npx stylelint "**/*.css"
+
+      - name: Build Project
+        run: |
+          echo "Building Project..."
+          mkdir build
+          rsync -av --exclude 'build/' . build/
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build/
+
+      - name: Deploy to Development Environment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Deploying to Development Environment..."
+          # Add actual deployment commands here (e.g., Firebase, Netlify, GitHub Pages, etc.)
