@@ -25,9 +25,9 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Fix incorrect percentage notation */
 .some-class {
-  color: color-mix(in srgb, var(--base-color) 10%, transparent);
+  /* Using modern color notation */
+  color: color(var(--base-color) / 10%);
 }
 
 /* Ensure correct indentation */
